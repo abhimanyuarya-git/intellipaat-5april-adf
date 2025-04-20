@@ -1,16 +1,24 @@
 {
-	"name": "DS_blob_source_PurchaseOrder",
+	"name": "DS_blob_source_FileDynamic",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_innovantrablob_storage",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "PurchaseOrder.txt",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
 				"container": "source"
 			},
 			"columnDelimiter": ",",

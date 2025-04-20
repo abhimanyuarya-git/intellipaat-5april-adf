@@ -49,8 +49,14 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_blob_source_PurchaseOrder",
-						"type": "DatasetReference"
+						"referenceName": "DS_blob_source_FileDynamic",
+						"type": "DatasetReference",
+						"parameters": {
+							"FileName": {
+								"value": "@pipeline().parameters.FileName",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
@@ -61,6 +67,11 @@
 				]
 			}
 		],
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }
