@@ -1,0 +1,9 @@
+{
+	"name": "intelliaat-5apr-adf",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ed892d1f-376f-471a-896d-69dd38fc76b1",
+		"tenantId": "24aef272-2bd0-455a-9c70-5385bd970e57"
+	}
+}
